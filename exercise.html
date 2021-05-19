@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lateef&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="./css/main.css">
+    <title>تمرین</title>
+</head>
+<body>
+    <nav> 
+        <ul>
+            <li class="logo">Reg<span class="color-1">Ex</span> </li>
+            <li><a href="./index.html"><i class="fas fa-home"></i> خانه </a></li>
+            <li><a href="./tutorial.html"><i class="fab fa-leanpub"></i> آموزش </a></li>
+            <li><a href="./exercise.html"><i class="fab fa-phoenix-framework"></i> تمرین </i></a></li>
+        </ul>
+    </nav>
+    <section id="exercise">
+        <div class="container">
+            <div class="secnd-nav">
+                <p>Expression</p>
+            </div>
+                <input type="text" name="Expression-box" id="Expression-box" autocomplete="off" value = '([A-Z])\w+' onclick = regex()>
+                <p id="test-text">RegExr was created by gskinner.com, and is proudly hosted by Media Temple. Edit the Expression & Text to see matches. Roll over matches or the expression for details. PCRE & JavaScript flavors of RegEx are supported. Validate your expression with Tests mode. The side bar includes a Cheatsheet, full Reference, and Help. You can also Save & Share with the Community, and view patterns you create or favorite in My Patterns. Explore results with the Tools below. Replace & List output custom results. Details lists capture groups. Explain describes your expression in plain English.</p>
+            </div>
+
+<script>
+    let RegExInput =  document.querySelector('#test-text').innerHTML;
+    function regex(){
+    var copy = RegExInput;
+    let inputStr = document.querySelector('#Expression-box').value;
+    let resultArr =copy.match(new RegExp(inputStr, 'g'));
+    resultArr.sort();
+    var copy = RegExInput;
+    for(let i=0 ; i < resultArr.length ; i++)
+        copy = copy.replaceAll(resultArr[i], "<span class='highlight'>" + resultArr[i] + "</span>");
+    document.querySelector('#test-text').innerHTML=copy;
+    }
+    
+    
+    
+    
+    /*
+    let arr = new Array(); 
+    for(let i =0 ; i< resultArr.length; i++)
+    arr.push(RegExInput.search(resultArr[i],'g'));
+
+    // console.log(resultArr);
+    
+    for(var i=0;i<resultArr.length;i++)
+    {
+        highlight(resultArr[i] , arr[i]);
+        console.log(i +" : " + resultArr[i] + " __ " + arr[i] );
+    }
+
+
+    function highlight(text , indx) {
+    var inputText = document.querySelector('#test-text');
+    var innerHTML = inputText.innerHTML;
+    var index = indx;
+    if (index >= 0) { 
+    innerHTML = innerHTML.substring(0,index) + "<span class='highlight'>" + innerHTML.substring(index,index+text.length) + "</span>" + innerHTML.substring(index + text.length);
+    inputText.innerHTML = innerHTML;
+    }
+    }*/
+
+</script>
+</body>
+</html>
