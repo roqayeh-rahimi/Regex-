@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lateef&display=swap" rel="stylesheet">
+    <!-- <link href="./font/Lateef/Lateef-Regular.ttf" rel="stylesheet"> -->
+
+    <link rel="stylesheet" href="./css/main.css">
+    <title>آموزش</title>
+</head>
+<body>
+    <nav> 
+        <ul>
+            <li class="logo">Reg<span class="color-1">Ex</span> </li>
+            <li><a href="./index.html"><i class="fas fa-home"></i> خانه </a></li>
+            <li><a href="./tutorial.html"><i class="fab fa-leanpub"></i> آموزش </a></li>
+            <li><a href="./exercise.html"><i class="fab fa-phoenix-framework"></i> تمرین </i></a></li>
+        </ul>
+    </nav>
+    <section id="tut2" class="tutorial">
+        <div class="container">
+            <h2>Quantifierهای <span class="arnd">*</span>، <span class="arnd">+</span>، <span class="arnd">?</span> و <span class="arnd">{}</span></h2>
+            <p>همان‌طور که از معنای کلمه‌ی Quantifier مشخص است، می‌خواهیم از آن‌ها برای کمیت سنجی استفاده کنیم. فرض کنید که یک توالی بهم ریخته از حروف زبان انگلیسی را به‌صورت String در اختیار دارید و می‌خواهید بخشی از آن را جداسازی کنید که حتما a و b به‌طور متوالی پشت‌ سر هم قرار گرفته باشند اما مهم نیست که حتما c هم در این توالی وجود داشته باشد ولی اگر وجود داشت، می‌خواهید به‌هر تعداد c که وجود دارد، جداسازی کنید. توجه کنید که به‌هر تعداد c وجود داشته باشد در این الگو جداسازی و مشخص می‌شود. حال برای این کار می‌توانیم به این صورت عمل کنیم:</p>
+            <img src="./img/t2-1.png" class="image" alt="">
+            <br>
+            <p>اما اگر وجود یک c در این توالی برای شما الزامی است و همچنین می‌خواهید که هر تعداد c هم در ادامه‌ی a و b، وجود داشته باشد با الگوی خود جداسازی کنید می‌توانید از <span class="arnd">+</span> استفاده کنید:</p>
+            <img src="./img/t2-2.png" class="image" alt="">
+            <br>
+            <p>اما ممکن است مسئله تغییر کند و بخواهید فقط یک c را جداسازی کنید اما اگر هم وجود نداشت، مسئله‌ای نیست بنابراین می‌توانید از <span class="arnd">?</span> به‌صورت زیر استفاده کنید:</p>
+            <img src="./img/t2-3.png" class="image" alt="">
+            <br>
+            <p>حال تصور کنید که الزاما باید حرف c در توالی شما فقط دو بار تکرار شده باشد. Regex برای این مسئله هم چاره اندیشی کرده است و می‌توانید با <span class="arnd">{}</span>، مسئله را به‌خوبی حل کنید:</p>
+            <img src="./img/t2-4.png" class="image" alt="">
+            <br>
+            <p>یا اگر می‌خواهید بخشی را جداسازی کنید که دو c یا بیشتر در توالی وجود داشته باشد نیز می‌توانید به‌صورت زیر عمل کنید:            </p>
+            <img src="./img/t2-5.png" class="image" alt="">
+            <br>
+            <p>یا حتی اگر بخواهید محدودیت ایجاد کنید که در توالی دو الی پنج c وجود داشته باشد، راه حل ساده است:            </p>
+            <img src="./img/t2-6.png" class="image" alt="">
+            <br>
+            <p>همان‌طور که همه می‌دانیم همیشه مسئله یکسانی نداریم بنابراین شاید مسئله به گونه‌ای تغییر کند که وجود a در ابتدای توالی اهمیت بسیاری داشته باشد و بخواهیم اگر bc را به هر تعدادی که وجود داشته باشد با همین توالی جداسازی کنیم، از <span class="arnd">( )</span> کمک خواهیم گرفت:</p>
+            <img src="./img/t2-7.png" class="image" alt="">
+            <br>
+            <p>یا اگر بخواهیم تعداد توالی bc را محدود کنیم، از بخش قبل استفاده می‌کنیم و <span class="arnd">*</span> را با <span class="arnd">{}</span> جایگزین می‌کنیم:            </p>
+            <img src="./img/t2-8.png" class="image" alt="">
+            <br>
+            <p>حتما توصیه می‌شود که برای درک هر کدام از این مثال‌ها، آن‌ها را امتحان کنید و به‌ این صورت با مشاهده خروجی هر کدام از کمیت سنج‌ها می‌توانید درک بهتری از کاربرد و ادغام آن‌ها داشته باشید.</p>
+
+        </div>
+    </section>
+    <section id="tut3" class="tutorial">
+        <div class="container">
+            <h2>OR operator <span class="arnd">|</span> یا <span class="arnd">[]</span></h2>
+            <p>در این بخش به عملگرهای <span class="arnd">|</span> و <span class="arnd">[]</span> می‌پردازیم که هر دوی آن‌ها عملکردی تقریبا مشابه دارند. اگر به‌هر صورتی در زبان‌های برنامه‌نویسی با این عملگر کار کرده باشید می‌توانید به‌خوبی عملکرد آن را درک کنید. رشته‌ی بهم‌ریخته‌ی بخش قبل را به‌خاطر بیاورید و تصویر کنید که حتما می‌خواهید a را در ابتدای توالی خود داشته باشید اما در ایندکس دوم این توالی فرقی نمی‌کند که b وجود داشته باشد یا c و فقط می‌خواهید یکی از آن‌ها پس از حرف a قرار گرفته باشد.</p>
+            <img src="./img/t3-1.png" class="image" alt="">
+            <br>
+            <p>توجه داشته باشید که با استفاده از عملگر <span class="arnd">|</span>، یکی از طرفین عملگر Capture می‌شود اما اگر می‌خواهید این اتفاق رخ ندهد می‌توانید به‌صورت زیر عمل کنید:            </p>
+            <img src="./img/t3-2.png" class="image" alt="">
+            <br>
+        
+        </div>
+    </section>
+    <section id="tut4" class="tutorial">
+        <div class="container">
+            <h2>Character classهای <span class="arnd">\d</span>، <span class="arnd">\w</span>، <span class="arnd">\s</span> و <span class="arnd">.</span></h2>
+            <p>مطمئنا Stringهایی که در اختیار شما قرار دارند شامل حروف، اعداد و فاصله‌ها می‌شوند. بنابراین باید بتوانیم در الگوهای خود اعداد و فاصله‌ها را علاوه‌بر حروف، شناسایی کنیم. برای شناسایی اعداد می‌توانیم از <span class="arnd">\d</span> استفاده کنیم و تمام اعداد استفاده شده در یک String را استخراج کنیم:</p>
+            <img src="./img/t4-1.png" class="image" alt="">
+            <br>
+            <p>همچنین اگر بخواهید <span class="arnd">_</span> ها و اعداد ۰ تا ۹ را علاوه‌بر تمام حروف که a تا z و A تا Z را تشکیل می‌دهند در String مورد نظر شناسایی کنید کافی است تا از <span class="arnd">\w</span> استفاده کنید:            </p>
+            <img src="./img/t4-2.png" class="image" alt="">
+            <br>
+            <p>حتی شاید بخواهید که فاصله‌های میان تمام کاراکترهای موجود در String را حذف یا فقط شناسایی کنید:            </p>
+            <img src="./img/t4-3.png" class="image" alt="">
+            <br>
+            <p>و در آخر اگر تصمیم شما بر انتخاب تمام کاراکترهای موجود در String است، با:            </p>
+            <img src="./img/t4-4.png" class="image" alt="">
+            <br>
+            <p>تمام کاراکترها توسط Regex شناسایی می‌شوند و می‌توانید عملیات مورد نظر خود را بر روی آن‌ها اعمال کنید.            </p>
+            <p>همچنین باید اضافه کنیم که برخلاف <span class="arnd">\d</span>، <span class="arnd">\w</span> و <span class="arnd">\s</span> نیز Charcater classهای دیگری مانند <span class="arnd">\W</span>، <span class="arnd">\D</span> و <span class="arnd">\S</span> وجود دارند که عملکرد آن‌ها خلاف مثال‌هایی است که در این بخش زده‌ایم یعنی زمانی که از <span class="arnd">\D</span> استفاده می‌کنیم در واقع می‌خواهیم کاراکترهای غیر عددی را مشخص کنیم:            </p>
+            <img src="./img/t4-5.png" class="image" alt="">
+            <br>
+            <p>البته شاید بخواهید که از کاراکترهای <span class="arnd">^.[$()|*+?{\</span> به شکل اصلی خودشان مانند یک کاراکتر عادی استفاده کنید. خبر بسیار خوب این است که به این موضوع توجه شده اما اگر می‌خواهید که Regex، این کاراکترها را به‌عنوان کاراکترهای عادی شناسایی کند می‌بایستی از <span class="arnd">\</span> قبل از آن‌ها استفاده کنید، برای مثال:            </p>
+            <img src="./img/t4-6.png" class="image" alt="">
+            <br>
+            <p>اتفاق خوشحال کننده‌تر آن است که ما می‌توانیم تب‌ها را با <span class="arnd">\t</span> و خط جدید را با <span class="arnd">\n</span> شناسایی کنیم.            </p>
+
+        </div>
+    </section>
+    <section id="tut5" class="tutorial">
+        <div class="container">
+            <h2>flagها</h2>
+            <p>مفهوم اساسی‌تری در Regex وجود دارد که آن را با نام Flag می‌شناسیم و اکثر الگوهایی که در Regex تعریف می‌کنیم میان دو کاراکتر <span class="arnd">\S</span> قرار می‌گیرند.</p>
+            <p>برای مثال اگر الگوی Regex ما <span class="arnd">/abc*/</span> باشد می‌توانیم در پایان آن Flag یا Flagهای مورد نظرمان را مشخص کنیم.</p>
+            <p>
+                <ul>
+                    <li>
+                        <p>g: با اضافه کردن این Flag در انتهای الگوی Regex که با عنوان global از آن یاد می‌شود، قادر خواهیم بود تا با الگوی خود تمام توالی‌ها را تشخیص دهیم اما بدون استفاده از این Flag تنها با اولین تطبیق، جستجو به پایان می‌رسد.</p>
+                    </li>
+                    <li>
+                        m: توضیح این Flag ممکن است کمی گنگ به‌نظر برسد اما به‌طور کلی این Flag باعث می‌شود تا Regex خطوط جدید در یک String را به رسمیت بشناسد و به‌عنوان خطوط جدید با آن‌ها رفتار کند. مثلا اگر این flag را فعال کرده باشید و همزمان از <span class="arnd">^</span> یا <span class="arnd">$</span> در الگوی خود استفاده کرده باشید، ابتدا و انتهای خطوط مطابقت داده می‌شوند.
+                    </li>
+                    <li>
+                        <p>i: این Flag به‌منظور insensitive کردن جستجو استفاده می‌شود یعنی اینکه جستجوی Regex به کوچک یا بزرگ بودن حروف حساس نخواهد بود و برای مثال در زمانی که الگوی <span class="arnd">abc*</span> را در یک String جستجو می‌کنید، توالی‌ای مانند AbCc نیز می‌تواند یکی از نتایج جستجو باشد.                        </p>
+                    </li>
+                </ul>
+            </p>
+            <br>
+
+        </div>
+    </section>
+    <section id="tut6" class="tutorial">
+        <div class="container">
+            <h2>Grouping و Capturing            </h2>
+            <p>از الگوی <span class="arnd">a(b|c)</span> قبل‌تر در مثال‌ها استفاده کرده بودیم اما توضیحی در رابطه با <span class="arnd">( )</span> داده نشده بود. این پرانتزها باعث می‌شوند تا یک Capturing Group با مقدار <span class="arnd">b|c</span> در الگوی خود ایجاد کنید که درنهایت نتایج در یک گروه جداگانه قرار داده می‌شوند. حال برای غیرفعال کردن Capturing Group می‌تواند از <span class="arnd">?:</span> به‌صورت زیر استفاده کنید:</p>
+            <img src="./img/t6-1.png" class="image" alt="">
+            <br>
+            <p>البته در صورتی که بخواهید Capturing Group فعال باشد اما نام خاصی برای آن در نظر داشته باشید راه حلی وجود دارد:            </p>
+            <img src="./img/t6-2.png" class="image" alt="">
+            <br>
+            <p>با الگوی بالا، foo به‌عنوان نام گروه نمایش داده می‌شود.</p>
+            <p>این تکنیک می‌تواند در زمان استخراج داده‌های مورد نیازتان با هر کدامیک از زبان‌های برنامه‌نویسی بسیار مفید باشد زیرا می‌توانید نتایج مطابقت داده‌ شده را به‌صوت یک آرایه دریافت کنید. همچنین با نامگذاری Capturing Groupها قادر خواهید بود که از همان نام به‌عنوان Index آرایه استفاده کرده و داده‌های مورد نظر خود را از آرایه دریافت کنید.</p>
+     
+        </div>
+    </section>
+    <section id="tut7" class="tutorial">
+        <div class="container">
+            <h2>Bracket expression <span class="arnd">[]</span>            </h2>
+            <p>مطمئنا اگر مقاله را با دقت دنبال کرده باشید، متوجه خواهید شد که در بخش عملگرها از براکت‌ها استفاده کرده بودیم حال در این بخش مفصل‌تر عملکرد براکت‌ها را شرح می‌دهیم. با اطلاعات قبلی خود می‌دانیم که <span class="arnd">[abc]</span> عملکردی شبیه <span class="arnd">a|b|c</span> دارد. به‌ این صورت که در String ما تمام حروف a،b و c را به‌طور مجزا مشخص می‌کند.            </p>
+            <p>حال با قرار دادن <span class="arnd">-</span> می‌توانیم یک توالی را در الگوی خود مشخص کنیم، برای مثال:            </p>
+            <img src="./img/t7-1.png" class="image" alt="">
+            <br>
+            <p>از حرف a تا c را در String ما جستجو می‌کند. یا اگر به‌دنبال حروف و اعداد در یک String باشید می‌توانید از الگوی زیر استفاده کنید:            </p>
+            <img src="./img/t7-2.png" class="image" alt="">
+            <br>
+            <p>همچنین باید اضافه کرد که با استفاده از <span class="arnd">^</span> درون براکت‌ها می‌توانید الگوی خود را منفی کنید. مثلا:            </p>
+            <img src="./img/t7-3.png" class="image" alt="">
+            <br>
+            <p>هرچیزی به جز حروف و اعداد ۰ تا ۹ را جستجو می‌کند. توجه داشته باشید که تمام مواردی مانند <span class="arnd">\$</span> که قبل‌تر درباره‌شان صحبت کردیم، در براکت‌ها دیگر کاربردی ندارد یا لنگر <span class="arnd">^</span>، عملکرد متفاوتی از خود نشان می‌دهد.</p>
+            <br><br>
+            <div class="neon-btn"><a href="./exercise.html">رفتن به تمرین</a></div>
+            <br><br>
+        </div>
+    </section>
+</html>
